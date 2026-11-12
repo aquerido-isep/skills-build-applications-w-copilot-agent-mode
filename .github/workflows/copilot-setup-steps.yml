@@ -1,5 +1,4 @@
 #Comment: This workflow sets up the Copilot environment.
-#teste
 name: Copilot Setup Steps
 
 on:
