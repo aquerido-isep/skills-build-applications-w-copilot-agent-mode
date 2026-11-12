@@ -23,5 +23,12 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - name: Install JavaScript dependencies
+          cache-dependency-path: |
+            octofit-tracker/backend/package-lock.json
+            octofit-tracker/frontend/package-lock.json
+      - name: Install backend dependencies
         run: npm ci
+        working-directory: octofit-tracker/backend
+      - name: Install frontend dependencies
+        run: npm ci
+        working-directory: octofit-tracker/frontend
